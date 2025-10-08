@@ -44,6 +44,16 @@
    {{ request()->is('Classroom') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
    Classroom
 </a>
+<a href="/teacher" 
+   class="rounded-md px-3 py-2 text-sm font-medium 
+   {{ request()->is('Teacher') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+   Teacher
+</a>
+<a href="/subject" 
+   class="rounded-md px-3 py-2 text-sm font-medium 
+   {{ request()->is('subject') ? 'bg-gray-950/50 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
+   Teacher
+</a>
             </div>
           </div>
         </div>
@@ -98,6 +108,8 @@
         <x-nav-link href="/student" :active="request()->is('student')">Student</x-nav-link>
         <x-nav-link href="/guardian" :active="request()->is('guardian')">Guardian</x-nav-link>
         <x-nav-link href="/classroom" :active="request()->is('classroom')">Classroom</x-nav-link>
+        <x-nav-link href="/teacher" :active="request()->is('teacher')">Teacher</x-nav-link>
+        <x-nav-link href="/subject" :active="request()->is('subject')">Teacher</x-nav-link>
       </div>
       <div class="border-t border-white/10 pt-4 pb-3">
         <div class="flex items-center px-5">

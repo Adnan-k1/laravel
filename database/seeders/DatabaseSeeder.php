@@ -5,7 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Classroom;
-use App\Models\Guardian; // ✅ Import Model Guardian
+use App\Models\Guardian; 
+use App\Models\Teacher;
+use App\Models\Subject;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,7 +22,13 @@ class DatabaseSeeder extends Seeder
             ->hasStudents(5)
             ->create();
 
-        // ✅ BARU: Membuat 30 data Wali (Guardian)
+        
         Guardian::factory(30)->create();
+
+        
+
+        Subject::factory(4)
+            ->hasTeacher()
+            ->create();
     }
 }

@@ -7,6 +7,8 @@ use App\Http\Controllers\KontakController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\GuardianController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\SubjectController;
 
 Route::get('/', function () {
     return view('home', ['title' => 'Home']);
@@ -19,3 +21,5 @@ Route::get('/kontak',[KontakController::class, 'index']);
 Route::resource('/student', StudentController::class);
 Route::resource('/guardian', GuardianController::class);
 Route::resource('/classroom', ClassroomController::class);
+Route::resource('/teacher', TeacherController::class);
+Route::resource('/subject', SubjectController::class);
