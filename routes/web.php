@@ -28,16 +28,16 @@ Route::resource('teacher', TeacherController::class);
 Route::resource('subject', SubjectController::class);
 
 
-// --- RUTE ADMIN GROUP ---
+
 Route::prefix('admin')->name('admin.')->group(function () {
     
-    // Dashboard (URL: /admin/dashboard, Name: admin.dashboard)
+    
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
 
     Route::get('student', [StudentController::class, 'adminIndex'])->name('student');
-    
+     Route::post('/student/store', [StudentController::class, 'store'])->name('student.store');
     
     Route::get('classroom', [ClassroomController::class, 'adminIndex'])->name('classroom');
     Route::get('guardian', [GuardianController::class, 'adminIndex'])->name('guardian');
