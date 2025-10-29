@@ -1,0 +1,4 @@
+The migrations directory is typically used to store migration files that define the structure of your database tables. Since you haven't specified any particular migration files to create, I will provide a comment indicating that this directory is intentionally left blank.
+
+database/migrations:
+<!-- This directory is intentionally left blank. -->

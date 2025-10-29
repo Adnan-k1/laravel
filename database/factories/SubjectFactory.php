@@ -18,7 +18,7 @@ class SubjectFactory extends Factory
     {
       
         return [
-            'name' => fake()->unique()->randomElement(["web dev ", "game dev","mobile","IOT"]),
+            'name' => fake()->unique()->randomElement(["web dev ", "game dev","mobile","IOT", "AI"]),
             'description' => fake()->sentence(1,2),
         ];
     }

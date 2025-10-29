@@ -15,6 +15,15 @@ class GuardianController extends Controller
        'guardian' => $guardian
     ]);
     }
+    public function adminIndex()
+    {
+        $guardian = Guardian::all();
+
+        return view('admin.guardian', [ 
+            'title' => 'Data wali murid (Admin)',
+            'guardian' => $guardian
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.

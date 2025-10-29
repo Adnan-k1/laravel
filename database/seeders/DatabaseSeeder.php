@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
         
 
-        Subject::factory(4)
+        Subject::factory(5)
             ->hasTeacher()
             ->create();
     }

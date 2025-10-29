@@ -1,0 +1,23 @@
+{
+  "name": "my-laravel-project",
+  "version": "1.0.0",
+  "description": "A Laravel project for managing an admin dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run watch",
+    "watch": "mix watch",
+    "build": "mix",
+    "lint": "eslint resources/js/**/*.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "laravel-mix": "^6.0.19"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "sass": "^1.32.0"
+  },
+  "license": "MIT"
+}

@@ -18,8 +18,18 @@ class SubjectController extends Controller
        'subject' => $subject
     ]);
     }
+    
 }
+public function adminIndex()
+    {
+        $subject = Subject::all();
 
+        // Mengarah ke resources/views/admin/subject.blade.php
+        return view('admin.subject', [ 
+            'title' => 'Data mata pelajaran (Admin)',
+            'subject' => $subject
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      */

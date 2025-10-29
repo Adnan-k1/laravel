@@ -8,62 +8,36 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
 
+    // Metode index() untuk rute publik/user: /student
     public function index()
     {
-        $students = Student::all(); 
+        $students = Student::all();
 
+        // Mengarah ke resources/views/student.blade.php
         return view('student', [
-            'title' => 'Data Student',
-            // Variabel $students dikirim ke View
-            'students' => $students 
+            'title' => 'Data Student (User)',
+            'students' => $students
+        ]);
+    }
+
+    // Metode adminIndex() untuk rute admin: /admin/student
+    public function adminIndex()
+    {
+        $students = Student::all();
+
+        // Mengarah ke resources/views/admin/student.blade.php
+        return view('admin.student', [ 
+            'title' => 'Data Students (Admin)',
+            'students' => $students
         ]);
     }
     
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    // ... Metode create(), store(), show(), edit(), update(), destroy() ...
+    // Dibiarkan kosong/sesuai kebutuhan Anda saat ini
+    public function create() {}
+    public function store(Request $request) {}
+    public function show(string $id) {}
+    public function edit(string $id) {}
+    public function update(Request $request, string $id) {}
+    public function destroy(string $id) {}
 }

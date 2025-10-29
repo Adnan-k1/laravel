@@ -1,0 +1,59 @@
+<?php
+
+namespace Tests\Feature;
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
+
+class ExampleTest extends TestCase
+{
+    use RefreshDatabase;
+
+    /** @test */
+    public function it_can_access_the_dashboard()
+    {
+        $response = $this->get('/dashboard');
+
+        $response->assertStatus(200);
+    }
+
+    /** @test */
+    public function it_can_access_the_students_page()
+    {
+        $response = $this->get('/students');
+
+        $response->assertStatus(200);
+    }
+
+    /** @test */
+    public function it_can_access_the_classroom_page()
+    {
+        $response = $this->get('/classroom');
+
+        $response->assertStatus(200);
+    }
+
+    /** @test */
+    public function it_can_access_the_guardians_page()
+    {
+        $response = $this->get('/guardians');
+
+        $response->assertStatus(200);
+    }
+
+    /** @test */
+    public function it_can_access_the_teachers_page()
+    {
+        $response = $this->get('/teachers');
+
+        $response->assertStatus(200);
+    }
+
+    /** @test */
+    public function it_can_access_the_subjects_page()
+    {
+        $response = $this->get('/subjects');
+
+        $response->assertStatus(200);
+    }
+}

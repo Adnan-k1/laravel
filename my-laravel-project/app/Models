@@ -1,0 +1,21 @@
+The Models directory is typically used to define Eloquent models in a Laravel application. Since you requested the contents for the Models directory but did not specify any particular model to create, I will provide a placeholder for a model file.
+
+Here is the content for the file: /my-laravel-project/my-laravel-project/app/Models/User.php
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
+}

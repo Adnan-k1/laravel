@@ -1,0 +1,20 @@
+The `/my-laravel-project/my-laravel-project/app/Console` directory is typically used for console commands in a Laravel application. Since you have not specified any particular console command to create, I will provide a basic structure for a console command file.
+
+Here is the content for a sample console command file named `ExampleCommand.php` that you can place in the `/my-laravel-project/my-laravel-project/app/Console` directory:
+
+<?php
+
+namespace App\Console;
+
+use Illuminate\Console\Command;
+
+class ExampleCommand extends Command
+{
+    protected $signature = 'example:run';
+    protected $description = 'This is an example command';
+
+    public function handle()
+    {
+        $this->info('Example command executed successfully!');
+    }
+}

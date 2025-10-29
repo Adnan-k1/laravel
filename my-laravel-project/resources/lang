@@ -1,0 +1,5 @@
+The `resources/lang` directory is typically used for localization files in a Laravel project. Since you have not specified any particular language files or content, I will create an empty directory structure for localization.
+
+Here is the content for the `resources/lang` directory:
+
+<!-- This file is intentionally left blank. -->
